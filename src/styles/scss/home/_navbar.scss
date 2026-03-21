@@ -3,10 +3,9 @@
 .nav {
     position: relative;
     padding: 1rem 2rem;
-    background-color: variables.$middle-coffee;
+    background-color: variables.$black-coffee;
     backdrop-filter: blur(1rem);
-    box-shadow: 0 0.8rem 1.5rem rgba(variables.$black, 0.25); 
-    border: 0.1rem solid variables.$white;
+    box-shadow: 0 0.8rem 1.5rem rgba(variables.$white-coffee, 0.25); 
 
     nav {
         display: flex;
@@ -36,7 +35,7 @@
 
             &:hover {
                 background-color: rgba(variables.$black, 0.3);
-                box-shadow: 0 0.3rem 0.8rem rgba(variables.$black-coffee, 0.4);
+                box-shadow: 0 0.3rem 0.8rem rgba(variables.$white-coffee, 0.4);
             }
 
             &.active::after {
