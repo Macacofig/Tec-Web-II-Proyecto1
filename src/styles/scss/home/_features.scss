@@ -1,0 +1,57 @@
+@use '../variables';
+
+.features {
+    padding: 10vh 0;
+    background-color: variables.$middle-coffee;
+
+    &__header {
+        padding: 0 8%;
+        margin-bottom: 3vh;
+
+        h2 {
+            color: variables.$white;
+            font-size: 2rem;
+        }
+    }
+
+    &__track {
+        display: flex;
+        gap: 2rem;
+        padding: 0 8%;
+        overflow-x: auto; // clave para carrusel
+        scroll-behavior: smooth;
+
+        // ocultar scrollbar (opcional)
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.card {
+    min-width: 20rem; // importante para efecto carrusel
+    flex-shrink: 0;
+
+    padding: 2rem;
+    background: rgba(variables.$black, 0.3);
+    backdrop-filter: blur(0.8rem);
+    border-radius: 1.5rem;
+    border: 0.1rem solid rgba(variables.$white, 0.2);
+    color: variables.$white;
+    transition: all 0.3s ease;
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        opacity: 0.85;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        background: rgba(variables.$black, 0.5);
+        box-shadow: 0 0.5rem 1.5rem rgba(variables.$black, 0.3);
+    }
+}
