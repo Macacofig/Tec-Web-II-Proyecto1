@@ -46,23 +46,25 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
 
         padding: 0 8%;
         color: variables.$white;
-        max-width: 40rem;
+        max-width: 50rem;
+        margin: 0 auto;
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3rem); 
-            letter-spacing: 0.15rem;
+            font-size: clamp(3rem, 8vw, 5rem); 
+            letter-spacing: 0.2rem;
             text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
         p {
-            font-size: clamp(1.7rem, 2vw, 1.2rem);
-            opacity: 0.9;
-            margin-bottom: 2rem;
+            font-size: clamp(1rem, 2vw, 1.4rem); 
+            opacity: 0.85;
+            max-width: 35ch;
         }
     }
 }

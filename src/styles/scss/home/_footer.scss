@@ -6,11 +6,12 @@
     color: variables.$white;
 
     &__container {
-        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 3rem;
         padding: 0 8%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
 
     h3, h4 {
