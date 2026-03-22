@@ -1,0 +1,94 @@
+@use '../mixins';
+@use '../variables';
+@use 'sass:color';
+
+/* ========================= */
+/* COMENTARIES */
+/* ========================= */
+
+.comentaries-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.comentary-card {
+    background-color: variables.$white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.comentary-card:hover {
+    transform: translateY(-3px);
+}
+
+.comentary-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: variables.$black-coffee;
+}
+
+.comentary-card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@include mixins.respond-to(mobile) 
+{
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    input, textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    label {
+        font-size: 0.95rem;  
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .comentaries-container {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+        max-width: 400px;
+    }
+
+    .comentary-card {
+        padding: 0.8rem;
+    }
+
+    .comentary-card h3 {
+        font-size: 1rem;
+    }
+
+    .comentary-card p {
+        font-size: 0.85rem;
+    }
+}

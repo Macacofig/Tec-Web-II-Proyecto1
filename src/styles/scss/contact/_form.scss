@@ -1,0 +1,129 @@
+@use '../mixins';
+@use '../variables';
+@use 'sass:color';
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+
+.form {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: variables.$white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin: auto;
+    width: 100%;
+    max-width: 350px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+label {
+    text-align: left;
+    font-weight: 600;
+    color: variables.$black-coffee;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: variables.$middle-coffee;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    background-color: variables.$middle-coffee;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: color.scale(variables.$middle-coffee, $lightness: -10%);
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: variables.$black-coffee;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@include mixins.respond-to(mobile) 
+{
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    input, textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    label {
+        font-size: 0.95rem;  
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

@@ -3,8 +3,13 @@
 @use 'home/about';
 @use 'home/features';
 @use 'home/footer';
+@use 'contact/form';
+@use 'contact/comentaries';
 
 body{
     margin: 0;
     padding: 0;
 }
+
+
+
