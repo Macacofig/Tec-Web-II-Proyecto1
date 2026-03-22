@@ -1,57 +1,104 @@
 @use '../variables';
 
 .features {
-    padding: 10vh 0;
+    padding: 12vh 0; 
     background-color: variables.$middle-coffee;
+    position: relative;
+    overflow: hidden;
 
     &__header {
         padding: 0 8%;
-        margin-bottom: 3vh;
+        margin-bottom: 5vh; 
+        text-align: center; 
 
         h2 {
             color: variables.$white;
-            font-size: 2rem;
+            font-size: clamp(2rem, 4vw, 3rem); 
+            font-family: serif;
+            letter-spacing: 0.1rem;
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 3.125rem; 
+                height: 0.125rem; 
+                background-color: variables.$white;
+                margin: 1rem auto;
+                opacity: 0.5;
+            }
         }
     }
 
     &__track {
         display: flex;
-        gap: 2rem;
-        padding: 0 8%;
-        overflow-x: auto; // clave para carrusel
+        gap: 2.5rem;
+        padding: 2rem 8%; 
+        overflow-x: auto; 
         scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch; 
 
-        // ocultar scrollbar (opcional)
         &::-webkit-scrollbar {
-            display: none;
+            height: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba(variables.$white, 0.2);
+            border-radius: 1rem;
         }
     }
 }
 
 .card {
-    min-width: 20rem; // importante para efecto carrusel
-    flex-shrink: 0;
+    min-width: 18rem; 
+    flex: 1 0 18rem; 
 
-    padding: 2rem;
-    background: rgba(variables.$black, 0.3);
-    backdrop-filter: blur(0.8rem);
-    border-radius: 1.5rem;
-    border: 0.1rem solid rgba(variables.$white, 0.2);
+    padding: 2.5rem 2rem;
+    background: linear-gradient(
+        135deg, 
+        rgba(variables.$white, 0.1), 
+        rgba(variables.$white, 0.05)
+    );
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    
+    border-radius: 2rem;
+    border: 0.0625rem solid rgba(variables.$white, 0.1);
     color: variables.$white;
-    transition: all 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 
     h3 {
-        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+        font-weight: 600;
+        color: variables.$white;
     }
 
     p {
-        font-size: 0.95rem;
-        opacity: 0.85;
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.8;
+        max-width: 30ch;
     }
 
     &:hover {
-        transform: scale(1.05);
-        background: rgba(variables.$black, 0.5);
-        box-shadow: 0 0.5rem 1.5rem rgba(variables.$black, 0.3);
+        transform: translateY(-0.75rem);
+        background: rgba(variables.$black, 0.2);
+        border-color: rgba(variables.$white, 0.4);
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+        
+        p {
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 30rem) {
+    .card {
+        min-width: 16rem;
+        padding: 2rem 1.5rem;
     }
 }
