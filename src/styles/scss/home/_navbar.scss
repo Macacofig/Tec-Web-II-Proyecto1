@@ -68,9 +68,10 @@
     }
 }
 
-/* TABLET & MOBILE */
+/*  TABLET & MOBILE:  */
 @media (max-width: 1024px) {
     .nav {
+        
         top: auto;
         bottom: 1.5rem; 
         left: 50%;
@@ -116,7 +117,9 @@
                         font-weight: 700;
                         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
                         
-                        &::after { display: none; } 
+                        &::after { 
+                            display: none; 
+                        } 
                     }
                 }
             }

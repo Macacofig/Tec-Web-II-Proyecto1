@@ -3,7 +3,7 @@
 .about {
     padding: 12vh 8%; 
     background-color: variables.$white;
-    overflow: clip; 
+    overflow: hidden; 
 
     &__container {
         max-width: 75rem; 
@@ -63,10 +63,9 @@
                 transform: translateY(-0.625rem); 
             }
         }
-    } 
-}
+    }
 
- .reveal {
+    .reveal {
         opacity: 0;
         transform: translateY(3rem);
         transition: all 0.8s ease;
@@ -76,6 +75,8 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
 .btn {
     display: inline-block; 
     padding: 1rem 2.2rem;
