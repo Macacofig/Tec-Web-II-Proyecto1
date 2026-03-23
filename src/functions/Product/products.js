@@ -12,6 +12,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById('modal-img');
     const modalCat = document.getElementById('modal-categoria'); // Corregido el ID
 
+    //BUSCAR
+    const searchInput = document.getElementById("search-input");
+    const categories = document.querySelectorAll(".category-view");
+    let timeout;
+    searchInput.addEventListener("input", () => {
+        clearTimeout(timeout);
+
+        timeout = setTimeout(() => {
+            const value = searchInput.value.toLowerCase().trim();
+
+            if (!value) return;
+
+            let found = false;
+
+            categories.forEach((category, index) => {
+                const cards = category.querySelectorAll(".product-card");
+
+                cards.forEach(card => {
+                    const title = card.querySelector("h3").innerText.toLowerCase();
+
+                    if (title.includes(value) && !found) {
+                        found = true;
+
+                        // 1️⃣ Mover carrusel
+                        track.style.transform = `translateX(-${index * 25}%)`;
+
+                        // actualizar chips visualmente
+                        chips.forEach(c => c.classList.remove("active"));
+                        chips[index].classList.add("active");
+
+                        // 2️⃣ Abrir modal
+                        openModal(card);
+                    }
+                });
+            });
+        }, 400);
+    });
     /**
      * LÓGICA DEL CARRUSEL
      */
