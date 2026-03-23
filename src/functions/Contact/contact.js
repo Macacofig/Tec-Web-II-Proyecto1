@@ -32,7 +32,7 @@ function loadComentaries() {
 
     if (listcomentaries.length === 0) {
         container.innerHTML = `
-            <p class="empty-msg">No hay comentarios aún ☕</p>
+            <p class="empty-msg">No hay comentarios aún</p>
         `;
         return;
     }
