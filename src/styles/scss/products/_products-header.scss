@@ -1,48 +1,66 @@
 @use '../variables';
+@use '../mixins';
 
 .products-header {
+    padding: 8rem 2rem 2rem;
     text-align: center;
-    padding: 80px 1rem 1rem 1rem; // Espacio para navbar fija
-    height: 200px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 
     .brand-title {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
+        font-family: serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
         color: variables.$black-coffee;
-        font-weight: 800;
-    }
-}
-
-.search-filters-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-    .search-box input {
-        width: 300px;
-        padding: 0.6rem 1.2rem;
-        border-radius: 20px;
-        border: 1px solid #ddd;
-        outline: none;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
     }
 
-    .category-chips {
+    .search-filters-container {
         display: flex;
-        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
 
-        .chip {
-            padding: 0.4rem 1.2rem;
-            border-radius: 8px;
-            border: 1px solid variables.$black-coffee;
-            background: transparent;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            input {
+                width: 100%;
+                padding: 0.8rem 1rem 0.8rem 2.5rem;
+                border-radius: 2rem;
+                border: 1px solid #ddd;
+                outline: none;
+            }
+            &::before {
+                content: '🔍';
+                position: absolute;
+                left: 0.8rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
 
-            &.active {
-                background: variables.$black-coffee;
-                color: white;
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            
+            .chip {
+                padding: 0.5rem 1.2rem;
+                border-radius: 2rem;
+                border: 1px solid variables.$middle-coffee;
+                cursor: pointer;
+                font-size: 0.9rem;
+                transition: 0.3s;
+
+                &.active {
+                    background: variables.$black-coffee;
+                    color: variables.$white;
+                }
             }
         }
     }
