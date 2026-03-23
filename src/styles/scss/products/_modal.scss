@@ -1,0 +1,92 @@
+@use '../mixins';
+@use '../variables';
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &.is-visible { display: flex; }
+
+    .modal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+        position: relative;
+        background: #666; // Color base gris del boceto
+        width: 100%;
+        max-width: 900px;
+        height: 500px;
+        border-radius: 50px; // Bordes muy redondeados como en tu dibujo
+        overflow: hidden;
+        z-index: 5001;
+        display: flex;
+    }
+
+    .modal-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr; // División mitad y mitad
+        width: 100%;
+    }
+
+    /* IZQUIERDA */
+    .info-side {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+
+        .text-content {
+            h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+            p#modal-detalle { font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+            .modal-cat { font-style: italic; opacity: 0.7; font-size: 0.9rem; }
+        }
+
+        .price-box {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    /* DERECHA */
+    .image-side {
+        background: #999; // Un gris un poco más claro para el contenedor de imagen
+        margin: 20px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2rem;
+        z-index: 10;
+        &:hover { background: rgba(255,255,255,0.4); }
+    }
+}

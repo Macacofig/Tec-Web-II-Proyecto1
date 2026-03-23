@@ -1,0 +1,85 @@
+@use '../mixins';
+@use '../variables';
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 200px); // Resto del alto de pantalla
+}
+
+.carousel-track {
+    display: flex;
+    width: 400%; // 4 categorías
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-view {
+    width: 100%;
+    height: 100%;
+    padding: 0 8% 2rem 8%; // Espacio lateral para que no pegue a los bordes
+}
+
+.products-grid {
+    display: grid;
+    gap: 1.5rem;
+    height: 90%;
+    // Fuerza 3 columnas y 2 filas estrictas
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.product-card {
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+    max-height: 100%; 
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .card-image-container {
+        width: 100%;
+        height: 55%; // Proporción para la imagen
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Para que la imagen llene el espacio como en tu captura
+        }
+    }
+
+    .card-info {
+        padding: 1rem;
+        flex-grow: 1;
+        h3 { font-size: 1.1rem; margin-bottom: 4px; color: #222; }
+        p { font-size: 0.8rem; color: #777; margin: 0; }
+    }
+
+    .card-footer {
+        padding: 0.8rem 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .btn-open {
+            background: #222;
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
