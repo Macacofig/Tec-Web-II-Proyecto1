@@ -1,0 +1,36 @@
+@use '../mixins';
+@use '../variables';
+
+.contact-main {
+    padding-top: 70px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8f8f8 0%, #ede7e0 100%);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@include mixins.respond-to(tablet) {
+    .contact-content { padding: 2.5rem; }
+}
+
+@include mixins.respond-to(desktop) {
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr; // El lado de comentarios un poco más ancho
+        gap: 4rem;
+        padding: 4rem 2rem;
+        align-items: start;
+    }
+
+    .contact-left {
+        position: sticky;
+        top: 100px; // Se mantiene fijo mientras haces scroll en los comentarios
+    }
+}

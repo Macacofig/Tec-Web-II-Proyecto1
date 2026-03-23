@@ -17,7 +17,7 @@ function AddComentary(name, email, reason) {
 }
 
 function loadComentaries() {
-    const container = document.querySelector(".comentaries-container");
+    const container = document.querySelector(".comments-container");
     container.innerHTML = "";
 
     listcomentaries.forEach(c => {
