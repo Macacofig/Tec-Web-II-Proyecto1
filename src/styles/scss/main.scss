@@ -7,6 +7,9 @@
 @use 'contact/comentaries';
 @use 'contact/layoutcontact';
 @use 'contact/footer1';
+@use 'products/modal';
+@use 'products/products-header';
+@use 'products/carousel';
 
 body{
     margin: 0;
