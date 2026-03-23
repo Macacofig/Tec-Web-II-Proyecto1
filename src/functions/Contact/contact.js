@@ -8,26 +8,59 @@ function saveComentaries() {
 
 
 function AddComentary(name, email, reason) {
-    listcomentaries.push({ 
-        name, email, reason 
-    });
-    saveComentaries(); // guardar en navegador
+
+    let user = listcomentaries.find(c => c.email === email);
+
+    if (user) {
+        // ya existe → agregar comentario
+        user.comments.push({ name, reason });
+    } else {
+        // nuevo usuario
+        listcomentaries.push({
+            email,
+            comments: [{ name, reason }]
+        });
+    }
+
+    saveComentaries();
     loadComentaries();
-    return listcomentaries;
 }
 
 function loadComentaries() {
     const container = document.querySelector(".comments-container");
     container.innerHTML = "";
 
-    listcomentaries.forEach(c => {
-        const div = document.createElement("div");
-        div.classList.add("comentary-card");
-        div.innerHTML = `
-            <h3>${c.name}</h3>
-            <p>${c.email}</p>
-            <p>${c.reason}</p>
+    if (listcomentaries.length === 0) {
+        container.innerHTML = `
+            <p class="empty-msg">No hay comentarios aún</p>
         `;
+        return;
+    }
+
+    listcomentaries.forEach(user => {
+        const div = document.createElement("div");
+        div.classList.add("comment-card");
+
+        div.innerHTML = `
+            <div class="comment-header">
+                <h4>${user.email}</h4>
+                <span class="arrow">▼</span>
+            </div>
+
+            <div class="comments-expansion">
+                ${user.comments.map(c => `
+                    <div class="individual-comment">
+                        <p><strong>${c.name}</strong></p>
+                        <p>${c.reason}</p>
+                    </div>
+                `).join("")}
+            </div>
+        `;
+
+        div.querySelector(".comment-header").addEventListener("click", () => {
+            div.classList.toggle("is-expanded");
+        });
+
         container.appendChild(div);
     });
 }
@@ -38,7 +71,6 @@ function clearComentaries() {
     console.log("Comentarios eliminados");
 }
 
-loadComentaries();
 
 document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('backToTop');
