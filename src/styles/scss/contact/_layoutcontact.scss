@@ -1,8 +1,30 @@
 @use '../mixins';
 @use '../variables';
 
+
+.comments-container {
+    background: #f5f2ee;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    min-height: 200px;
+}
+.empty-msg {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 2rem 0;
+}
+.error-msg {
+    display: block;
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+}
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
 .contact-main {
-    padding-top: 4rem;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -25,9 +47,9 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 2rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     max-width: 90rem;
-    margin: -8rem auto 0; // Sube el contenido sin mover el fondo
+    margin: 0 auto; // Sube el contenido sin mover el fondo
     position: relative;
     z-index: 2;
 
@@ -52,13 +74,14 @@
 }
 
 .contact-right {
-    min-width: 0;
-    // Truco visual: un fondo muy tenue detrás de las tarjetas para darles contraste
-    background: rgba(variables.$black-coffee, 0.02);
-    border-radius: 2.5rem;
-    padding: 2rem;
-    box-shadow: inset 0 0 40px rgba(variables.$black-coffee, 0.03);
-    border: 1px solid rgba(variables.$black-coffee, 0.03);
+    max-height: 800px; // Altura fija para permitir el scroll
+        overflow-y: auto;
+        
+        // SCROLL INVISIBLE
+        scrollbar-width: none; // Firefox
+        &::-webkit-scrollbar {
+            display: none; // Chrome, Safari, Edge
+        }
 
     @include mixins.respond-to(desktop) {
         padding: 3rem;
