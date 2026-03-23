@@ -6,7 +6,6 @@
     width: 100%;
     text-align: center;
     
-    // El título ahora tiene una tipografía con más cuerpo
     h2 {
         font-family: serif;
         font-size: clamp(2rem, 5vw, 2.5rem);
@@ -29,7 +28,6 @@
     background-color: variables.$white;
     padding: 2.5rem;
     border-radius: 1.5rem;
-    // Sombra más suave y profunda para efecto premium
     box-shadow: 0 1.25rem 3.75rem rgba(variables.$black-coffee, 0.08);
     border: 0.0625rem solid rgba(variables.$black-coffee, 0.05);
     transition: transform 0.3s ease;
