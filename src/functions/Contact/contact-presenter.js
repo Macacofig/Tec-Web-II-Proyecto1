@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const contactForm = document.getElementById("Contact-Form");
-    const nameInput = document.getElementById("name-input");
-    const emailInput = document.getElementById("email-input");
-    const reasonInput = document.getElementById("reason-input");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const reasonInput = document.getElementById("reason");
 
     contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
