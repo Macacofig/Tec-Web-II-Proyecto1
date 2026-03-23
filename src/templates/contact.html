@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/css/main.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav" aria-label="Main navigation">
+
+            <div class="nav__logo">
+                <a href="index.html">Cafresso</a>
+            </div>
+
+            <ul class="nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Products</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="hero-contact">
+            <h1>Cafresso Manjhcaprini</h1>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-left">
+                <section class="form-section">
+                    <p>Share your thoughts with us; your opinion matters.</p>
+
+                    <div class="form-container">
+                        <form id="Contact-Form"> 
+                            <div class="form-group">
+                                <label for="name">Name</label> 
+                                <input type="text" id="name" placeholder="Enter your name" required> 
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label> 
+                                <input type="email" id="email" placeholder="Enter your email" required> 
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reason">Message</label> 
+                                <textarea id="reason" placeholder="What's on your mind?" required></textarea> 
+                            </div>
+
+                            <button type="submit" class="btn-submit">Post Commentary</button> 
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <div class="contact-right">
+                <h2>Community Comments</h2>
+                <div class="comments-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer> 
+
+    </footer>
+    <script src="../functions/Contact/contact.js"></script>
+    <script src="../functions/Contact/contact-presenter.js"></script>
+    <script src="../functions/Home/navbar.js"></script>
+</body>
+
+</html>

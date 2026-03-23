@@ -16,16 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.target.reset();
     });
-
-    const downBar = document.querySelector(".down-bar");
-    const openBtn = document.getElementById("fab-toggle");
-    const closeBtn = document.getElementById("fab-close");
-
-    openBtn.addEventListener("click", () => {
-        downBar.classList.add("active");
-    });
-
-    closeBtn.addEventListener("click", () => {
-        downBar.classList.remove("active");
-    });
 });
