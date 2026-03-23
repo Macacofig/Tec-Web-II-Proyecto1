@@ -67,18 +67,40 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <section class="location-section">
+        <div class="location-container">
+            <div class="map-placeholder">
+                <div class="map-overlay"></div>
+                <div class="map-pin">
+                    <span class="pin-dot"></span>
+                </div>
+            </div>
 
+            <div class="location-card">
+                <span class="location-tag">Visítanos</span>
+                <h3>Nuestra Sede</h3>
+                <p>Calle Ficticia 123, Distrito del Café<br>Cochabamba, Bolivia</p>
+                <div class="location-details">
+                    <span><strong>L-V:</strong> 09:00 - 20:00</span>
+                    <span><strong>S-D:</strong> 09:00 - 18:00</span>
+                </div>
+                <a href="#" class="btn-directions">Ver en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <p>&copy; 2026 Cafresso Rituals. All rights reserved.</p>
     </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver al inicio">
+        &#8593;
+    </button>
 
     <script src="../functions/Contact/contact.js"></script>
     <script src="../functions/Contact/contact-presenter.js"></script>
     <script src="../functions/Home/navbar.js"></script>
+    <script src="../functions/Contact/location.js"></script>
+
 </body>
 </html>
