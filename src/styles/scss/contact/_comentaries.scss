@@ -1,45 +1,89 @@
 @use '../mixins';
 @use '../variables';
 
-.contact-right h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: variables.$black-coffee;
-}
-
-.comments-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
 .comment-card {
-    background: #fff;
-    padding: 1.2rem;
-    border-radius: 14px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    border-left: 5px solid variables.$middle-coffee;
-    transition: transform 0.3s ease;
+    background: variables.$white;
+    padding: 2.2rem;
+    border-radius: 1.8rem;
+    
+    // 1. EL BORDE: Usamos un color un poco más oscuro que el fondo para "encerrar" la tarjeta
+    border: 1px solid rgba(variables.$black-coffee, 0.1); 
+    
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
-    &:hover { transform: scale(1.02); }
+    // 2. LA SOMBRA: Doble capa. 
+    // La primera es oscura y pequeña (contorno). La segunda es difusa y suave (elevación).
+    box-shadow: 
+        0 2px 4px rgba(variables.$black-coffee, 0.05), 
+        0 10px 20px rgba(variables.$black-coffee, 0.08);
 
-    h4 { margin: 0 0 0.4rem 0; color: variables.$black-coffee; font-size: 1rem; }
-    p { margin: 0; color: #666; font-size: 0.9rem; line-height: 1.4; }
-}
+    &::after {
+        content: '“';
+        position: absolute;
+        top: 0.5rem;
+        right: 1.5rem;
+        font-family: serif;
+        font-size: 5rem;
+        color: variables.$middle-coffee;
+        opacity: 0.15; // Un poco más visible
+        line-height: 1;
+    }
 
-@include mixins.respond-to(desktop) {
-    .contact-right h2 { text-align: left; }
-
-    .comments-container {
-        max-height: 650px;
-        overflow-y: auto;
-        padding-right: 1rem;
-
-        /* Estilo del scroll */
-        &::-webkit-scrollbar { width: 6px; }
-        &::-webkit-scrollbar-thumb {
+    &:hover {
+        transform: translateY(-8px); // Más salto al hacer hover
+        border-color: variables.$middle-coffee; // El borde cambia de color al pasar el mouse
+        
+        // Sombra mucho más marcada en hover para dar sensación de altura real
+        box-shadow: 
+            0 20px 40px rgba(variables.$black-coffee, 0.12),
+            0 5px 10px rgba(variables.$middle-coffee, 0.05);
+            
+        .avatar {
             background: variables.$middle-coffee;
-            border-radius: 10px;
+            transform: scale(1.05);
         }
+    }
+
+    .comment-header {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(variables.$black-coffee, 0.05); // Línea divisoria interna
+        padding-bottom: 1rem;
+
+        .avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: variables.$black-coffee;
+            color: variables.$white;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .user-meta {
+            h4 {
+                margin: 0;
+                color: variables.$black-coffee;
+                font-size: 1.1rem;
+            }
+            span {
+                font-size: 0.75rem;
+                color: variables.$middle-coffee;
+                font-weight: 700;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        color: #2c2c2c; // Texto un poco más oscuro para que se lea mejor
+        line-height: 1.6;
+        font-style: italic;
     }
 }
