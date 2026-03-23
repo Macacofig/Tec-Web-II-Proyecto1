@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Cafresso</title>
     <link rel="stylesheet" href="../styles/css/main.css">
 </head>
-
 <body>
+
     <header class="navbar">
         <nav class="nav" aria-label="Main navigation">
-
             <div class="nav__logo">
                 <a href="index.html">Cafresso</a>
             </div>
-
             <ul class="nav__list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Products</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-
         </nav>
     </header>
 
     <main class="contact-main">
-        <section class="hero-contact">
-            <h1>Cafresso Manjhcaprini</h1>
-        </section>
-
-        <section class="contact-content">
-            <div class="contact-left">
+        <div class="contact-content fade-up"> 
+            
+            <aside class="contact-left">
                 <section class="form-section">
-                    <p>Share your thoughts with us; your opinion matters.</p>
+                    <h2>Get in Touch</h2>
+                    <p>Share your thoughts with us; your opinion matters and helps us grow the ritual.</p>
 
                     <div class="form-container">
-                        <form id="Contact-Form"> 
+                        <form id="contact-form" action="#" method="post">
                             <div class="form-group">
-                                <label for="name">Name</label> 
-                                <input type="text" id="name" placeholder="Enter your name" required> 
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email</label> 
-                                <input type="email" id="email" placeholder="Enter your email" required> 
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="reason">Message</label> 
-                                <textarea id="reason" placeholder="What's on your mind?" required></textarea> 
+                                <label for="reason">Your Message</label>
+                                <textarea id="reason" name="message" placeholder="What's on your mind?..." required></textarea>
                             </div>
 
-                            <button type="submit" class="btn-submit">Post Commentary</button> 
+                            <button type="submit" class="btn-submit">Send Message</button>
                         </form>
+
+                        <div class="form-social">
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Twitter">Twitter</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                        </div>
                     </div>
                 </section>
-            </div>
+            </aside>
 
-            <div class="contact-right">
-                <h2>Community Comments</h2>
-                <div class="comments-container"></div>
-            </div>
-        </section>
+            <section class="contact-right">
+                <h2>Community Rituals</h2>
+                
+                <div class="comments-container" id="comments-list">
+                    <article class="comment-card">
+                        <div class="comment-header">
+                            <div class="avatar">M</div>
+                            <div class="user-meta">
+                                <h4>Maria Garcia</h4>
+                                <span>Verified Ritual</span>
+                            </div>
+                        </div>
+                        <p>"The atmosphere here is unmatched. My daily morning ritual starts with their espresso."</p>
+                    </article>
+
+                    <article class="comment-card">
+                        <div class="comment-header">
+                            <div class="avatar">A</div>
+                            <div class="user-meta">
+                                <h4>Alex Smith</h4>
+                                <span>Coffee Enthusiast</span>
+                            </div>
+                        </div>
+                        <p>"Incredible attention to detail in every cup. Best artisan coffee in town!"</p>
+                    </article>
+
+                    <article class="comment-card">
+                        <div class="comment-header">
+                            <div class="avatar">L</div>
+                            <div class="user-meta">
+                                <h4>Lucia P.</h4>
+                                <span>Daily Visitor</span>
+                            </div>
+                        </div>
+                        <p>"I love the sustainable approach. Drinking coffee here feels like being part of a better world."</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <footer> 
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
+        <p>&copy; 2026 Cafresso Rituals. All rights reserved.</p>
     </footer>
+
     <script src="../functions/Contact/contact.js"></script>
     <script src="../functions/Contact/contact-presenter.js"></script>
     <script src="../functions/Home/navbar.js"></script>
 </body>
-
 </html>
