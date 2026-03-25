@@ -16,30 +16,29 @@
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-family: serif;
             letter-spacing: 0.15rem;
-            
-            &::after {
-                display: none;
-            }
         }
     }
 
     &__track {
         display: flex;
         gap: 2.5rem;
-        padding: 2rem 8%; 
-        overflow-x: auto; 
+        padding: 2rem 0; 
+        margin: 0 auto;  
+        max-width: 90%;
+        
+        /* Permitimos el scroll pero lo ocultamos visualmente */
+        overflow-x: scroll; 
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; 
-        scroll-padding-left: 2%;
+        scroll-behavior: smooth;
 
+        /* Ocultar barra en Chrome, Safari y Opera */
         &::-webkit-scrollbar {
+            display: none;
             height: 0.4rem;
         }
 
-        &::-webkit-scrollbar-thumb {
-            background: rgba(variables.$white, 0.2);
-            border-radius: 1rem;
-        }
+        -ms-overflow-style: none; 
+        scrollbar-width: none;  
     }
 }
 

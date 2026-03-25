@@ -5,7 +5,7 @@ const track = document.querySelector('.features__track');
 // 1. SCROLL CON BOTONES
 // ==========================
 
-// Creamos botones dinámicamente
+// 1. Crear y configurar botones
 const btnLeft = document.createElement('button');
 const btnRight = document.createElement('button');
 
@@ -15,21 +15,23 @@ btnRight.innerHTML = '›';
 btnLeft.classList.add('features__btn', 'left');
 btnRight.classList.add('features__btn', 'right');
 
-// Insertarlos en el DOM
 document.querySelector('.features').appendChild(btnLeft);
 document.querySelector('.features').appendChild(btnRight);
 
-// Scroll al hacer click
+// 2. Lógica de navegación
 btnRight.addEventListener('click', () => {
+    // Calculamos el ancho de una carta + el gap para un scroll exacto
+    const cardWidth = document.querySelector('.card').offsetWidth + 30; 
     track.scrollBy({
-        left: 300,
+        left: cardWidth,
         behavior: 'smooth'
     });
 });
 
 btnLeft.addEventListener('click', () => {
+    const cardWidth = document.querySelector('.card').offsetWidth + 40;
     track.scrollBy({
-        left: -300,
+        left: -cardWidth,
         behavior: 'smooth'
     });
 });
