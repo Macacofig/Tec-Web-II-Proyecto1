@@ -6,7 +6,12 @@
     background: #f5f2ee;
     padding: 1.5rem;
     border-radius: 1rem;
-    min-height: 200px;
+    max-height: 620px; // Altura fija para permitir el scroll
+    overflow-y: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 .empty-msg {
     text-align: center;
@@ -70,16 +75,7 @@
     }
 }
 
-.contact-right {
-    max-height: 800px; // Altura fija para permitir el scroll
-        overflow-y: auto;
-        
-        // SCROLL INVISIBLE
-        scrollbar-width: none; // Firefox
-        &::-webkit-scrollbar {
-            display: none; // Chrome, Safari, Edge
-        }
-
+.contact-right {        
     @include mixins.respond-to(desktop) {
         padding: 3rem;
     }

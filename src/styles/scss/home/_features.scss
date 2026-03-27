@@ -24,10 +24,10 @@
         gap: 2.5rem;
         padding: 2rem 0; 
         margin: 0 auto;  
-        max-width: 90%;
+        max-width: calc(22.5rem * 3 + 2.5rem * 2);
         
         /* Permitimos el scroll pero lo ocultamos visualmente */
-        overflow-x: scroll; 
+        overflow: hidden; 
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
 
@@ -131,5 +131,25 @@
     .card {
         min-width: 16rem;
         padding: 2rem 1.5rem;
+    }
+}
+@media (max-width: 64rem) { // 1024px
+    .features__track {
+        width: calc(22.5rem * 2 + 2.5rem * 1);
+    }
+}
+@media (max-width: 48rem) { // 768px
+    .features__track {
+        width: 22.5rem;
+    }
+}
+@media (max-width: 30rem) { // 480px
+    .card {
+        min-width: 18rem;
+        flex: 0 0 18rem;
+    }
+
+    .features__track {
+        width: 18rem;
     }
 }

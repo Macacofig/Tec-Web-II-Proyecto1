@@ -76,14 +76,22 @@
         }
     }
 
+    .comment-header h4 {
+        max-width: 70%;          
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
     .comment-header {
         display: flex;
         align-items: center;
-        gap: 1.2rem;
+        gap: 1rem;
+        justify-content: space-between;
         margin-bottom: 1.5rem;
         border-bottom: 1px solid rgba(variables.$black-coffee, 0.05); // Línea divisoria interna
         padding-bottom: 1rem;
 
+        
         .arrow {
             font-size: 0.9rem;
             transition: transform 0.3s ease;

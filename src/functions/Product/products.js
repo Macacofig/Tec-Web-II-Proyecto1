@@ -15,39 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
     //BUSCAR
     const searchInput = document.getElementById("search-input");
     const categories = document.querySelectorAll(".category-view");
-    let timeout;
-    searchInput.addEventListener("input", () => {
-        clearTimeout(timeout);
 
-        timeout = setTimeout(() => {
-            const value = searchInput.value.toLowerCase().trim();
+    searchInput.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter") return;
 
-            if (!value) return;
+        e.preventDefault(); // evitar submit o comportamientos raros
 
-            let found = false;
+        const value = searchInput.value.toLowerCase().trim();
+        if (!value) return;
 
-            categories.forEach((category, index) => {
-                const cards = category.querySelectorAll(".product-card");
+        let found = false;
 
-                cards.forEach(card => {
-                    const title = card.querySelector("h3").innerText.toLowerCase();
+        categories.forEach((category, index) => {
+            const cards = category.querySelectorAll(".product-card");
 
-                    if (title.includes(value) && !found) {
-                        found = true;
+            cards.forEach(card => {
+                const title = card.querySelector("h3").innerText.toLowerCase();
 
-                        // 1️⃣ Mover carrusel
-                        track.style.transform = `translateX(-${index * 25}%)`;
+                if (title.includes(value) && !found) {
+                    found = true;
 
-                        // actualizar chips visualmente
-                        chips.forEach(c => c.classList.remove("active"));
-                        chips[index].classList.add("active");
+                    // mover carrusel
+                    track.style.transform = `translateX(-${index * 25}%)`;
 
-                        // 2️⃣ Abrir modal
-                        openModal(card);
-                    }
-                });
+                    // actualizar chips
+                    chips.forEach(c => c.classList.remove("active"));
+                    chips[index].classList.add("active");
+
+                    // abrir modal
+                    openModal(card);
+                }
             });
-        }, 400);
+        });
+
+        // limpiar input SIEMPRE después de Enter
+        searchInput.value = "";
     });
     /**
      * LÓGICA DEL CARRUSEL

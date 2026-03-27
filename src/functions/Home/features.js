@@ -55,3 +55,29 @@ btnLeft.addEventListener('click', () => {
     }
 });
 
+// AUTOPLAY
+let autoPlay = setInterval(() => {
+    btnRight.click();
+}, 5000);
+
+// Resetear autoplay si el usuario interactúa
+const resetAutoplay = () => {
+    clearInterval(autoPlay);
+    autoPlay = setInterval(() => {
+        btnRight.click();
+    }, 5000);
+};
+
+btnRight.addEventListener('click', resetAutoplay);
+btnLeft.addEventListener('click', resetAutoplay);
+
+// Pausar cuando el mouse está encima
+track.addEventListener('mouseenter', () => {
+    clearInterval(autoPlay);
+});
+
+track.addEventListener('mouseleave', () => {
+    autoPlay = setInterval(() => {
+        btnRight.click();
+    }, 5000);
+});
