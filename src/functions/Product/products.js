@@ -13,18 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCat = document.getElementById('modal-categoria'); // Corregido el ID
 
     //BUSCAR
+    let found = false;
+    const errorMsg = document.getElementById("search-error");
     const searchInput = document.getElementById("search-input");
     const categories = document.querySelectorAll(".category-view");
 
     searchInput.addEventListener("keydown", (e) => {
+        searchInput.addEventListener("input", () => {
+            errorMsg.classList.remove("active");
+        });
         if (e.key !== "Enter") return;
 
         e.preventDefault(); // evitar submit o comportamientos raros
 
         const value = searchInput.value.toLowerCase().trim();
+        errorMsg.classList.remove("active");
+        errorMsg.textContent = "";
         if (!value) return;
 
-        let found = false;
+        found = false;
 
         categories.forEach((category, index) => {
             const cards = category.querySelectorAll(".product-card");
@@ -48,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        if (!found) {
+            errorMsg.textContent = "No se encontró ningún producto";
+            errorMsg.classList.add("active");
+        }
         // limpiar input SIEMPRE después de Enter
         searchInput.value = "";
     });
@@ -132,5 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 0,
             behavior: 'smooth' 
         });
+    });
+});
+
+const toast = document.getElementById("toast");
+
+// función para mostrar mensaje
+function showToast() {
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000); // dura 2 segundos
+}
+
+document.querySelectorAll(".btn-add").forEach(button => {
+    button.addEventListener("click", () => {
+        showToast();
     });
 });

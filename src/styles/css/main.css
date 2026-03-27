@@ -482,6 +482,27 @@
   opacity: 0.7;
 }
 
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 99999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -625,6 +646,18 @@
     transform: scale(1) translateY(0);
   }
 }
+.search-error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-error.active {
+  opacity: 1;
+}
+
 .products-header {
   padding: 8rem 2rem 2rem;
   text-align: center;

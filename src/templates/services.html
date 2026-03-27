@@ -24,6 +24,7 @@
             <div class="search-filters-container">
                 <div class="search-box">
                     <input id ="search-input" type="text" placeholder="Search a product...">
+                    <p id="search-error" class="search-error"></p>
                 </div>
                 <div class="category-chips">
                     <button class="chip active" data-index="0">Breads</button>
@@ -39,7 +40,7 @@
                 
                 <div class="category-view">
                     <div class="products-grid">
-                        <div class="product-card" data-price="$18.00" data-detail="Croissant clásico de mantequilla, hojaldrado y dorado al horno. Exterior crujiente e interior suave con un aroma irresistible." data-cat="CA">
+                        <div class="product-card" data-price="$18.00" data-detail="Classic butter croissant, flaky and golden-baked. Crispy on the outside and soft on the inside with an irresistible aroma." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/butter_croissant.png" alt="Butter croissant">
                             </div>
@@ -51,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="product-card" data-price="$20.00" data-detail="Croissant relleno de chocolate fundido, con capas ligeras y textura crujiente. Perfecto equilibrio entre dulzura y mantequilla." data-cat="CA">
+                        <div class="product-card" data-price="$20.00" data-detail="Croissant filled with melted chocolate, featuring light layers and a crispy texture. A perfect balance of sweetness and buttery flavor." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/chocolate_croissant.jpg" alt="Chocolate croissant">
                             </div>
@@ -63,7 +64,7 @@
                             </div>
                         </div>
 
-                        <div class="product-card" data-price="$15.00" data-detail="Baguette artesanal crujiente rellena con ingredientes frescos. Ideal para una comida ligera y sabrosa." data-cat="CA">
+                        <div class="product-card" data-price="$15.00" data-detail="Artisan crispy baguette filled with fresh ingredients. Ideal for a light and tasty meal." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/baguette_sandwich.jpg" alt="Baguette sandwich">
                             </div>
@@ -75,7 +76,7 @@
                             </div>
                         </div>
 
-                        <div class="product-card" data-price="$22.00" data-detail="Tostada crujiente con aguacate fresco, especias suaves y un toque de limón. Ligera, nutritiva y llena de sabor." data-cat="CA">
+                        <div class="product-card" data-price="$22.00" data-detail="Crispy toast topped with fresh avocado, mild spices, and a touch of lemon. Light, nutritious, and full of flavor." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/avocado_toast.jpg" alt="Avocado toast">
                             </div>
@@ -87,7 +88,7 @@
                             </div>
                         </div>
 
-                        <div class="product-card" data-price="$19.00" data-detail="Sándwich caliente de jamón y queso fundido en pan suave, tostado al punto perfecto para un sabor reconfortante." data-cat="CA">
+                        <div class="product-card" data-price="$19.00" data-detail="Warm ham and melted cheese sandwich on soft bread, toasted to perfection for a comforting taste." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/sandwich.jpg" alt="Ham & Cheese sandwich">
                             </div>
@@ -99,7 +100,7 @@
                             </div>
                         </div>
 
-                        <div class="product-card" data-price="$25.00" data-detail="Pan tostado con mantequilla y ajo, crujiente por fuera y suave por dentro. Perfecto como acompañamiento o snack." data-cat="CA">
+                        <div class="product-card" data-price="$25.00" data-detail="Toasted bread with butter and garlic, crispy on the outside and soft on the inside. Perfect as a side or snack." data-cat="Bread">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/garlic_bread.jpg" alt="Garlic bread">
                             </div>
@@ -115,7 +116,7 @@
 
                 <div class="category-view">
                     <div class="products-grid">
-                        <div class="product-card" data-price="$21.00" data-detail="Café espresso intenso y concentrado, con crema dorada en la superficie y un sabor profundo que despierta los sentidos." data-cat="EO">
+                        <div class="product-card" data-price="$21.00" data-detail="Strong and concentrated espresso with a golden crema on top and a deep flavor that awakens the senses." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-expreso.jpg" alt="Expresso en taza pequeña">
                             </div>
@@ -127,7 +128,7 @@
                                 <span>$21.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$23.00" data-detail="Café americano suave y equilibrado, elaborado al alargar un espresso con agua caliente para una experiencia más ligera." data-cat="EO">
+                        <div class="product-card" data-price="$23.00" data-detail="Smooth and balanced Americano made by adding hot water to espresso for a lighter coffee experience." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-americano.webp" alt="Cafe americano">
                             </div>
@@ -139,7 +140,7 @@
                                 <span>$23.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$20.00" data-detail="Capuchino clásico con espresso, leche vaporizada y espuma cremosa, creando una textura suave y un sabor perfectamente balanceado." data-cat="EO">
+                        <div class="product-card" data-price="$20.00" data-detail="Classic cappuccino with espresso, steamed milk, and creamy foam, creating a smooth texture and perfectly balanced flavor." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-capuchino.jpg" alt="Capuchino con crema en vaso alto">
                             </div>
@@ -151,7 +152,7 @@
                                 <span>$20.00</span>
                             </div>
                     </div>
-                        <div class="product-card" data-price="$21.00" data-detail="Capuchino clásico con espresso, leche vaporizada y espuma cremosa, creando una textura suave y un sabor perfectamente balanceado." data-cat="EO">
+                        <div class="product-card" data-price="$21.00" data-detail="Smooth latte made with espresso and steamed milk, offering a creamy texture and mild coffee flavor." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-latte.webp" alt="Latte en copa alta, divido en capas de leche y cafe">
                             </div>
@@ -163,7 +164,7 @@
                                 <span>$21.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$24.00" data-detail="Mocha indulgente con espresso, chocolate fundido y leche cremosa, coronado con una textura sedosa y sabor dulce." data-cat="EO">
+                        <div class="product-card" data-price="$24.00" data-detail="Indulgent mocha with espresso, melted chocolate, and creamy milk, delivering a rich and sweet taste." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-mocha.jpg" alt="Mocha en vaso tipo cervecero con crema">
                             </div>
@@ -175,7 +176,7 @@
                                 <span>$24.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$22.00" data-detail="Flat white con espresso intenso y microespuma sedosa, ofreciendo un sabor más fuerte y textura aterciopelada." data-cat="EO">
+                        <div class="product-card" data-price="$22.00" data-detail="Flat white with intense espresso and velvety microfoam, offering a stronger flavor and silky texture." data-cat="Coffee">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cafe-flat-white.webp" alt="Flat white con crema en la cima con diseño">
                             </div>
@@ -191,7 +192,7 @@
 
                 <div class="category-view">
                     <div class="products-grid">
-                        <div class="product-card" data-price="$30.00" data-detail="Pastel de chocolate húmedo y rico, con capas suaves y un intenso sabor a cacao que se derrite en cada bocado." data-cat="HE">
+                        <div class="product-card" data-price="$30.00" data-detail="Moist and rich chocolate cake with soft layers and an intense cocoa flavor that melts in every bite." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-chocolate.jpg" alt="Rebanada de pastel de chocolate">
                             </div>
@@ -203,7 +204,7 @@
                                 <span>$30.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$40.00" data-detail="Cheesecake cremoso con base crujiente de galleta, suave, delicado y perfectamente equilibrado en dulzura." data-cat="HE">
+                        <div class="product-card" data-price="$40.00" data-detail="Creamy cheesecake with a crunchy cookie base, smooth, delicate, and perfectly balanced in sweetness." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-chese.jpg" alt="Cheese cake con frutilla">
                             </div>
@@ -215,7 +216,7 @@
                                 <span>$40.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$50.00" data-detail="Carrot cake esponjoso con zanahoria natural y especias suaves, cubierto con un frosting cremoso irresistible." data-cat="HE">
+                        <div class="product-card" data-price="$50.00" data-detail="Fluffy carrot cake made with natural carrots and mild spices, topped with irresistible creamy frosting." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-carrot.webp" alt="Carrot cake con crema y adorno de zanahoria">
                             </div>
@@ -227,7 +228,7 @@
                                 <span>$50.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$45.00" data-detail="Red velvet suave y elegante, con un ligero toque de cacao y una textura aterciopelada acompañada de crema dulce." data-cat="HE">
+                        <div class="product-card" data-price="$45.00" data-detail="Soft and elegant red velvet cake with a hint of cocoa and a velvety texture paired with sweet cream." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-red-velvet.webp" alt="Red Velvet con polvo red en la cima">
                             </div>
@@ -239,7 +240,7 @@
                                 <span>$45.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$35.00" data-detail="Lemon cake fresco y ligero, con un toque cítrico que aporta equilibrio entre dulzura y acidez." data-cat="HE">
+                        <div class="product-card" data-price="$35.00" data-detail="Fresh and light lemon cake with a citrus touch that perfectly balances sweetness and acidity." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-lemon.jpg" alt="Lemon cake con adornos de limon y hojas">
                             </div>
@@ -251,7 +252,7 @@
                                 <span>$35.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$48.00" data-detail="Tiramisú clásico con capas de café, crema suave y cacao, ofreciendo un sabor profundo y sofisticado." data-cat="HE">
+                        <div class="product-card" data-price="$48.00" data-detail="Classic tiramisu with layers of coffee, smooth cream, and cocoa, offering a rich and sophisticated flavor." data-cat="Cake">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/cake-tiramisu.jpg" alt="Tiramisu Cake con polvo de tiramisu y acompañamiento de crema y chocolate">
                             </div>
@@ -268,7 +269,7 @@
 
                 <div class="category-view">
                     <div class="products-grid">
-                        <div class="product-card" data-price="$35.00" data-detail="Brownie de chocolate intenso, denso por dentro y ligeramente crujiente por fuera, perfecto para los amantes del cacao." data-cat="MA">
+                        <div class="product-card" data-price="$35.00" data-detail="Rich chocolate brownie, dense on the inside and slightly crispy on the outside, perfect for chocolate lovers." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-brownie.jpg" alt="Brawnie con una bola de helado, y oreo">
                             </div>
@@ -280,7 +281,7 @@
                                 <span>$35.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$25.00" data-detail="Helado del día preparado con ingredientes frescos, cremoso y lleno de sabor según la selección especial." data-cat="MA">
+                        <div class="product-card" data-price="$25.00" data-detail="Ice cream of the day made with fresh ingredients, creamy and full of flavor based on the daily selection." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-ice-cream.jpg" alt="3 bolas de helado de vainilla">
                             </div>
@@ -292,7 +293,7 @@
                                 <span>$25.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$15.00" data-detail="Pancakes esponjosos y dorados, servidos calientes con un toque dulce que los hace irresistibles." data-cat="MA">
+                        <div class="product-card" data-price="$15.00" data-detail="Fluffy golden pancakes served warm with a sweet touch that makes them irresistible." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-pancakes.jpg" alt="Montaña de pancakes con dulce de chocolate ">
                             </div>
@@ -304,7 +305,7 @@
                                 <span>$15.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$18.00" data-detail="Waffles crujientes por fuera y suaves por dentro, perfectos para acompañar con frutas o toppings dulces." data-cat="MA">
+                        <div class="product-card" data-price="$18.00" data-detail="Crispy on the outside and soft on the inside waffles, perfect with fruits or sweet toppings." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-waffle.jpg" alt="waffles con frutilla y arandano">
                             </div>
@@ -316,7 +317,7 @@
                                 <span>$18.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$22.00" data-detail="Bowl de frutas frescas de temporada, ligero, natural y refrescante para cualquier momento del día." data-cat="MA">
+                        <div class="product-card" data-price="$22.00" data-detail="Fresh seasonal fruit bowl, light, natural, and refreshing for any time of the day." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-fruit-bowl.webp" alt="Bowl de frutas (kiwi, arandano y frutilla)">
                             </div>
@@ -328,7 +329,7 @@
                                 <span>$22.00</span>
                             </div>
                         </div>
-                        <div class="product-card" data-price="$12.00" data-detail="Churros dorados y crujientes, espolvoreados con azúcar y perfectos para acompañar con chocolate caliente." data-cat="MA">
+                        <div class="product-card" data-price="$12.00" data-detail="Golden and crispy churros, coated with sugar and perfect to enjoy with hot chocolate." data-cat="Desert">
                             <div class="card-image-container">
                                 <img src="../assets/PRODUCTS/desert-churros.jpg" alt="Churros espolvoreados con azucar">
                             </div>
@@ -366,7 +367,7 @@
                 
                 <div class="price-section">
                     <span id="modal-precio" class="price">$0.00</span>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -375,7 +376,7 @@
     <button id="backToTop" class="back-to-top" aria-label="Volver al inicio">
         &#8593;
     </button>
-
+    <div id="toast" class="toast">Producto añadido 🛒</div>
     <script src="../functions/Product/products.js"></script>
 </body>
 </html>
