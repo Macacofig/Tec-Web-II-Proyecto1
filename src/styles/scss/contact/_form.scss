@@ -37,7 +37,6 @@
     }
 }
 
-// Estilo para el nuevo bloque de información rápida
 .form-info {
     display: flex;
     justify-content: center;
@@ -98,17 +97,16 @@
     }
 
     textarea {
-        height: 9.375rem; // 150px
-        resize: none; // Mantiene el diseño intacto
+        height: 9.375rem; 
+        resize: none; 
     }
 }
 
 .btn-submit {
     width: 100%;
     padding: 1.1rem;
-    border-radius: 3.125rem; // 50px
+    border-radius: 3.125rem; 
     border: none;
-    // Gradiente más sutil y elegante
     background: linear-gradient(135deg, variables.$middle-coffee, variables.$black-coffee);
     color: variables.$white;
     font-weight: 600;
@@ -124,7 +122,9 @@
         filter: brightness(1.1);
     }
 
-    &:active { transform: translateY(-0.0625rem); }
+    &:active { 
+        transform: translateY(-0.0625rem); 
+    }
 }
 
 .form-social {
@@ -142,7 +142,9 @@
         letter-spacing: 0.1rem;
         transition: color 0.3s ease;
 
-        &:hover { color: variables.$middle-coffee; }
+        &:hover { 
+            color: variables.$middle-coffee; 
+        }
     }
 }
 

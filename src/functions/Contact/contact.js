@@ -48,7 +48,7 @@ function loadComentaries() {
             </div>
 
             <div class="comments-expansion">
-                ${user.comments.map(c => `
+                ${(user.comments || []).map(c => `
                     <div class="individual-comment">
                         <p><strong>${c.name}</strong></p>
                         <p>${c.reason}</p>

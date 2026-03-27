@@ -27,11 +27,13 @@ body{
     right: 2rem;
     width: 3.5rem;
     height: 3.5rem;
+    
     background-color: variables.$black-coffee;
     color: variables.$white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,9 +43,15 @@ body{
     // Estado inicial: Oculto
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(1.25rem); 
+    
+    transition: 
+        opacity 0.4s ease, 
+        visibility 0.4s ease, 
+        transform 0.4s ease, 
+        background-color 0.3s ease;
+        
+    box-shadow: 0 0.25rem 0.9rem rgba(0, 0, 0, 0.3);
 
     &.active {
         opacity: 1;
@@ -54,5 +62,19 @@ body{
     &:hover {
         background-color: color.adjust(variables.$black-coffee, $lightness: 10%);
         transform: scale(1.1);
+    }
+
+    /* --- AJUSTES RESPONSIVOS --- */
+    @media (max-width: 30rem) 
+    { 
+        bottom: 5.9rem;
+        right: 1.5rem;
+        width: 3rem;  
+        height: 3rem;
+        font-size: 1.25rem;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
