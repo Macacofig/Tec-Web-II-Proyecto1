@@ -785,7 +785,7 @@
   text-align: center;
   flex-grow: 1;
 }
-.product-card .card-info h3 {
+.product-card .card-info h2 {
   color: #36261A;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
