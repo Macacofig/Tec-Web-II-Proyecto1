@@ -231,7 +231,7 @@
   right: -1.25rem;
   width: 100%;
   height: 100%;
-  background-color: rgba(214, 152, 105, 0.1);
+  background-color: rgba(139, 94, 60, 0.1);
   border-radius: 1.5rem;
   z-index: 0;
 }
@@ -261,7 +261,7 @@
 .btn {
   display: inline-block;
   padding: 1rem 2.2rem;
-  background-color: #D69869;
+  background-color: #8B5E3C;
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 600;
@@ -269,7 +269,7 @@
   font-size: 0.85rem;
   letter-spacing: 0.0625rem;
   border-radius: 3.125rem;
-  box-shadow: 0 0.25rem 0.9375rem rgba(214, 152, 105, 0.3);
+  box-shadow: 0 0.25rem 0.9375rem rgba(139, 94, 60, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover {
@@ -308,7 +308,7 @@
 }
 .features {
   padding: 12vh 0;
-  background-color: #D69869;
+  background-color: #8B5E3C;
   position: relative;
   overflow: hidden;
 }
@@ -706,7 +706,7 @@
 .products-header .search-filters-container .category-chips .chip {
   padding: 0.5rem 1.2rem;
   border-radius: 2rem;
-  border: 1px solid #D69869;
+  border: 1px solid #8B5E3C;
   cursor: pointer;
   font-size: 0.9rem;
   transition: 0.3s;
@@ -801,7 +801,7 @@
 }
 .product-card .card-footer span {
   font-weight: 800;
-  color: #D69869;
+  color: #8B5E3C;
   font-size: 1.25rem;
 }
 .product-card:hover {
@@ -888,7 +888,7 @@
 .form-group input, .form-group textarea, .form-group select {
   padding: 1rem;
   border-radius: 0.75rem;
-  border: 0.125rem solid #D69869;
+  border: 0.125rem solid #8B5E3C;
   font-size: 1rem;
   background: #fbfbfb;
   color: #36261A;
@@ -898,10 +898,10 @@
   color: #ccc;
 }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-  border-color: #D69869;
+  border-color: #8B5E3C;
   background: #FFFFFF;
   outline: none;
-  box-shadow: 0 0.5rem 1.25rem rgba(214, 152, 105, 0.1);
+  box-shadow: 0 0.5rem 1.25rem rgba(139, 94, 60, 0.1);
   transform: scale(1.01);
 }
 .form-group textarea {
@@ -914,18 +914,18 @@
   padding: 1.1rem;
   border-radius: 3.125rem;
   border: none;
-  background: linear-gradient(135deg, #D69869, #36261A);
+  background: linear-gradient(135deg, #8B5E3C, #36261A);
   color: #FFFFFF;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.05rem;
   cursor: pointer;
-  box-shadow: 0 0.5rem 1.25rem rgba(214, 152, 105, 0.3);
+  box-shadow: 0 0.5rem 1.25rem rgba(139, 94, 60, 0.3);
   transition: all 0.3s ease;
 }
 .btn-submit:hover {
   transform: translateY(-0.25rem);
-  box-shadow: 0 1rem 2rem rgba(214, 152, 105, 0.4);
+  box-shadow: 0 1rem 2rem rgba(139, 94, 60, 0.4);
   filter: brightness(1.1);
 }
 .btn-submit:active {
@@ -948,7 +948,7 @@
   transition: color 0.3s ease;
 }
 .form-social a:hover {
-  color: #D69869;
+  color: #8B5E3C;
 }
 
 @media (min-width: 1280px) {
@@ -1018,17 +1018,17 @@
   right: 1.5rem;
   font-family: serif;
   font-size: 5rem;
-  color: #D69869;
+  color: #8B5E3C;
   opacity: 0.15;
   line-height: 1;
 }
 .comment-card:hover {
   transform: translateY(-8px);
-  border-color: #D69869;
-  box-shadow: 0 20px 40px rgba(54, 38, 26, 0.12), 0 5px 10px rgba(214, 152, 105, 0.05);
+  border-color: #8B5E3C;
+  box-shadow: 0 20px 40px rgba(54, 38, 26, 0.12), 0 5px 10px rgba(139, 94, 60, 0.05);
 }
 .comment-card:hover .avatar {
-  background: #D69869;
+  background: #8B5E3C;
   transform: scale(1.05);
 }
 .comment-card .comment-header h4 {
@@ -1069,7 +1069,7 @@
 }
 .comment-card .comment-header .user-meta span {
   font-size: 0.75rem;
-  color: #D69869;
+  color: #8B5E3C;
   font-weight: 700;
 }
 .comment-card p {
@@ -1109,7 +1109,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(at 0% 0%, rgba(214, 152, 105, 0.08) 0, transparent 45%), radial-gradient(at 100% 100%, rgba(54, 38, 26, 0.05) 0, transparent 45%), #fdfbf9;
+  background: radial-gradient(at 0% 0%, rgba(139, 94, 60, 0.08) 0, transparent 45%), radial-gradient(at 100% 100%, rgba(54, 38, 26, 0.05) 0, transparent 45%), #fdfbf9;
 }
 .contact-main::before {
   content: "";
@@ -1196,7 +1196,7 @@
 .location-section .map-placeholder {
   position: absolute;
   inset: 0;
-  background-color: #D69869;
+  background-color: #8B5E3C;
   background-image: radial-gradient(circle at 0.125rem 0.125rem, rgba(0, 0, 0, 0.05) 0.0625rem, transparent 0);
   background-size: 1.8rem 1.8rem;
 }
@@ -1310,7 +1310,6 @@
   }
 }
 .footer {
-  background-color: #E9B58E;
   padding: 5rem 2rem 3rem;
   margin-top: 0rem;
   border-top: 1px solid rgba(54, 38, 26, 0.05);
@@ -1342,17 +1341,17 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #D69869;
+  background-color: #8B5E3C;
   transition: width 0.3s ease;
 }
 .footer .footer-links a:hover {
-  color: #D69869;
+  color: #8B5E3C;
 }
 .footer .footer-links a:hover::after {
   width: 100%;
 }
 .footer p {
-  color: #36261A;
+  color: #FFFFFF;
   font-size: 0.85rem;
   opacity: 0.5;
   letter-spacing: 0.05rem;
