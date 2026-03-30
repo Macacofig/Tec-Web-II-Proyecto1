@@ -54,8 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
         AddComentary(name, email, reason);
         event.target.reset();
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
     loadComentaries();
 });
